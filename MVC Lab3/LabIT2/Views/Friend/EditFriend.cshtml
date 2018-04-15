@@ -1,0 +1,34 @@
+﻿@model LabIT2.Models.FriendModel
+@{
+    ViewBag.Title = "Edit Friend";
+}
+
+<h2>Edit Friend @Model.Name</h2>
+
+@using (Html.BeginForm("EditFriend", "Friend"))
+{
+<div class="form-group">
+    @Html.LabelFor(m => m.FriendId)
+    @Html.TextBoxFor(m => m.FriendId, new { @class = "form-control" })
+    @Html.ValidationMessageFor(m => m.FriendId)
+
+</div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Name)
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.City)
+        @Html.TextBoxFor(m => m.City, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.City)
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Edit</button>
+    @Html.ActionLink("Back", "GetAllFriends", new { }, new { @class = "btn btn-default" })
+}
+

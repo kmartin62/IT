@@ -1,0 +1,37 @@
+﻿@model List<LabIT2.Models.FriendModel>
+@{
+    ViewBag.Title = "Get All Friends";
+}
+
+<h2>GetAllFriends</h2>
+
+
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        <td>Friend ID</td>
+        <td>Name</td>
+        <td>City</td>
+        <td></td>
+    </tr>
+
+    @{ 
+        int i = 0;
+
+        foreach (var obj in Model)
+        {
+    <tr>
+        <td>@obj.FriendId</td>
+        <td>@obj.Name</td>
+        <td>@obj.City</td>
+        <td>
+            @Html.ActionLink("Delete", "DeleteFriend", new { id = i }, new { @class = "btn btn-default" })
+            @Html.ActionLink("Edit", "EditFriend", new { id = i }, new { @class = "btn btn-default" })
+        </td>
+        
+
+    </tr>
+            i++;
+
+        }
+        }
+</table>
