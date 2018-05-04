@@ -1,0 +1,61 @@
+﻿@model List<MVCLab4.Models.FriendModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered table-responsive table-hover" id="myTable">
+    <thead>
+        <tr>
+            <td>Friend ID</td>
+            <td>Name</td>
+            <td>City</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            //int i = 0;
+
+            foreach (var obj in Model)
+            {
+
+                <tr>
+                    <td>@obj.FriendId</td>
+                    <td>@obj.Name</td>
+                    <td>@obj.Place</td>
+                    <td>
+                        <button data-friend-id="@obj.Id" class="btn btn-default js-delete">Delete</button>
+                        @*@Html.ActionLink("Delete", "DeleteFriend", new { id = obj.Id }, new { @class = "btn btn-default" })*@
+                        @Html.ActionLink("Edit", "EditFriend", new { id = obj.Id }, new { @class = "btn btn-default" })
+                    </td>
+
+
+                </tr>
+                //i++;
+
+            }
+        }
+    </tbody>
+</table>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            var table = $('#myTable').DataTable();
+            $("#myTable .js-delete").on("click", function () {
+                var button = $(this);
+                $.ajax({
+                    url: "/api/FriendApi/" + button.attr("data-friend-id"),
+                    method: "DELETE",
+                    success: function (result) {
+                        console.log(result)
+                        table.row(button.parents("tr")).remove().draw();
+                    }
+                });
+            });
+        });
+    </script>
+}
