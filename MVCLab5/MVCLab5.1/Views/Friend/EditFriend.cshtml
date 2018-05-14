@@ -1,0 +1,35 @@
+﻿@model MVCLab5._1.Models.FriendModel
+@{
+    ViewBag.Title = "Edit Friend";
+}
+
+<h2>Edit Friend @Model.Name</h2>
+
+@using (Html.BeginForm("EditFriend", "Friend"))
+{
+    @Html.HiddenFor(model => model.Id);
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.FriendId)
+        @Html.TextBoxFor(m => m.FriendId, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.FriendId)
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Name)
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Place)
+        @Html.TextBoxFor(m => m.Place, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Place)
+
+    </div>
+
+    <button type="submit" class="btn btn-primary">Edit</button>
+    @Html.ActionLink("Back", "GetAllFriends", new { }, new { @class = "btn btn-default" })
+}
