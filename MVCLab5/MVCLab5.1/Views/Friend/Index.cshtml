@@ -52,15 +52,19 @@
 @section scripts{
     <script>
         $(document).ready(function () {
-            var table = $('#myTable').DataTable();
+            var table = $('#myTable').DataTable();     
             $("#myTable .js-delete").on("click", function () {
                 var button = $(this);
                 $.ajax({
                     url: "/api/FriendApi/" + button.attr("data-friend-id"),
                     method: "DELETE",
                     success: function (result) {
-                        console.log(result)
-                        table.row(button.parents("tr")).remove().draw();
+                        if (result.Message != undefined) {
+                            window.location = "/Account/Login?ReturnUrl=%2FFriend%";
+                        } else {
+
+                            table.row(button.parents("tr")).remove().draw();
+                        }
                     }
                 });
             });
