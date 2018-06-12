@@ -1,0 +1,82 @@
+﻿@using ShoppingCart2.Models;
+@{
+    ViewBag.Title = "Index";
+}
+@Session["proizvodi"] = 0;
+<h2>Index</h2>
+<table id="myTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Sub total</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Cart cart in (List<Cart>)Session["Cart"])
+        {
+            <tr>
+                <td>@cart.book.Title</td>
+                <td>@cart.book.Price</td>
+                <td>@cart.Quantity</td>
+                <td>@(String.Format("{0:N0}", cart.book.Price * cart.Quantity))</td>
+                <td>
+                    <button data-id="@cart.book.Id" class="btn btn-default js-delete">Delete</button>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+    <tr>
+       
+        <td colspan="3">Total:</td>
+        <td>
+            @{
+                List<Cart> tmp = (List<Cart>)Session["Cart"];
+                var total = String.Format("{0:N0}", tmp.Sum(x => x.Quantity * x.book.Price));
+                Session["total"] = total;
+            }
+            @Session["total"]
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">Vkupno proizvodi:</td>
+        <td>
+            @{ 
+                List<Cart> temp = (List<Cart>)Session["Cart"];
+                var proizvodi = temp.Count;
+                Session["vkupno"] = proizvodi;
+            }
+            @Session["vkupno"]  
+        </td>
+    </tr>
+
+</table>
+
+@section scripts{
+    
+<script>
+    $(document).ready(function () {
+        var table = $('#myTable').DataTable();
+        $("#myTable .js-delete").on("click", function () {
+            var button = $(this);
+            bootbox.confirm("Are you sure?", function (result) {
+                if (result) {
+                    $.ajax({
+                        url: '/ShoppingCart/Delete/' + button.attr("data-id"),
+                        method: "DELETE",
+                        success: function (result) {
+                            table.row(button.parents("tr")).remove().draw();
+                            window.location = "/ShoppingCart";
+                        }
+                    })
+                }
+            })
+        })
+    })
+</script>
+    }
+
