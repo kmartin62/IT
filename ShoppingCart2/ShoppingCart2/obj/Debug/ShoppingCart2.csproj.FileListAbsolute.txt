@@ -126,3 +126,5 @@ C:\Users\pc\source\repos\ShoppingCart2\ShoppingCart2\bin\System.Web.Http.WebHost
 C:\Users\pc\source\repos\ShoppingCart2\ShoppingCart2\bin\System.Net.Http.Formatting.xml
 C:\Users\pc\source\repos\ShoppingCart2\ShoppingCart2\bin\System.Web.Http.xml
 C:\Users\pc\source\repos\ShoppingCart2\ShoppingCart2\bin\System.Web.Http.WebHost.xml
+C:\Users\pc\source\repos\ShoppingCart2\ShoppingCart2\obj\Debug\ShoppingCart2.Migrations.NAJNOVA.resources
+C:\Users\pc\source\repos\ShoppingCart2\ShoppingCart2\obj\Debug\ShoppingCart2.Migrations.ASASAS.resources

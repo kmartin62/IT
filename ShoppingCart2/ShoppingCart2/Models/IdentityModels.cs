@@ -32,5 +32,7 @@ namespace ShoppingCart2.Models
 
         public System.Data.Entity.DbSet<ShoppingCart2.Models.Book> Books { get; set; }
         public System.Data.Entity.DbSet<ShoppingCart2.Models.Cart> Carts { get; set; }
+
+        public System.Data.Entity.DbSet<ShoppingCart2.Models.Order> Orders { get; set; }
     }
 }
