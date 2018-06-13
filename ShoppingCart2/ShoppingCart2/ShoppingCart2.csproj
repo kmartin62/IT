@@ -204,6 +204,7 @@
     <Compile Include="Controllers\CartApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\Order1Controller.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\ShoppingCartController.cs" />
     <Compile Include="Global.asax.cs">
@@ -221,6 +222,30 @@
     <Compile Include="Migrations\201806121959399_ASASAS.Designer.cs">
       <DependentUpon>201806121959399_ASASAS.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806130732291_NV2.cs" />
+    <Compile Include="Migrations\201806130732291_NV2.Designer.cs">
+      <DependentUpon>201806130732291_NV2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806130914258_NV3.cs" />
+    <Compile Include="Migrations\201806130914258_NV3.Designer.cs">
+      <DependentUpon>201806130914258_NV3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806130934052_NV4.cs" />
+    <Compile Include="Migrations\201806130934052_NV4.Designer.cs">
+      <DependentUpon>201806130934052_NV4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806130938430_NV5.cs" />
+    <Compile Include="Migrations\201806130938430_NV5.Designer.cs">
+      <DependentUpon>201806130938430_NV5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806130944280_V100.cs" />
+    <Compile Include="Migrations\201806130944280_V100.Designer.cs">
+      <DependentUpon>201806130944280_V100.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806130954401_100ta.cs" />
+    <Compile Include="Migrations\201806130954401_100ta.Designer.cs">
+      <DependentUpon>201806130954401_100ta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Book.cs" />
@@ -228,6 +253,9 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Order1.cs" />
+    <Compile Include="Models\OrderDetails.cs" />
+    <Compile Include="Models\OrderDetails1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -541,6 +569,11 @@
     <Content Include="Views\Orders\Details.cshtml" />
     <Content Include="Views\Orders\Edit.cshtml" />
     <Content Include="Views\Orders\Index.cshtml" />
+    <Content Include="Views\Order1\Create.cshtml" />
+    <Content Include="Views\Order1\Delete.cshtml" />
+    <Content Include="Views\Order1\Edit.cshtml" />
+    <Content Include="Views\Order1\Index.cshtml" />
+    <Content Include="Views\Order1\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -567,6 +600,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806121959399_ASASAS.resx">
       <DependentUpon>201806121959399_ASASAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806130732291_NV2.resx">
+      <DependentUpon>201806130732291_NV2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806130914258_NV3.resx">
+      <DependentUpon>201806130914258_NV3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806130934052_NV4.resx">
+      <DependentUpon>201806130934052_NV4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806130938430_NV5.resx">
+      <DependentUpon>201806130938430_NV5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806130944280_V100.resx">
+      <DependentUpon>201806130944280_V100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806130954401_100ta.resx">
+      <DependentUpon>201806130954401_100ta.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

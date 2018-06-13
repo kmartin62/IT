@@ -128,3 +128,9 @@ C:\Users\pc\source\repos\ShoppingCart2\ShoppingCart2\bin\System.Web.Http.xml
 C:\Users\pc\source\repos\ShoppingCart2\ShoppingCart2\bin\System.Web.Http.WebHost.xml
 C:\Users\pc\source\repos\ShoppingCart2\ShoppingCart2\obj\Debug\ShoppingCart2.Migrations.NAJNOVA.resources
 C:\Users\pc\source\repos\ShoppingCart2\ShoppingCart2\obj\Debug\ShoppingCart2.Migrations.ASASAS.resources
+C:\Users\pc\source\repos\ShoppingCart2\ShoppingCart2\obj\Debug\ShoppingCart2.Migrations.NV2.resources
+C:\Users\pc\source\repos\ShoppingCart2\ShoppingCart2\obj\Debug\ShoppingCart2.Migrations.NV3.resources
+C:\Users\pc\source\repos\ShoppingCart2\ShoppingCart2\obj\Debug\ShoppingCart2.Migrations.NV4.resources
+C:\Users\pc\source\repos\ShoppingCart2\ShoppingCart2\obj\Debug\ShoppingCart2.Migrations.NV5.resources
+C:\Users\pc\source\repos\ShoppingCart2\ShoppingCart2\obj\Debug\ShoppingCart2.Migrations.V100.resources
+C:\Users\pc\source\repos\ShoppingCart2\ShoppingCart2\obj\Debug\ShoppingCart2.Migrations._100ta.resources
